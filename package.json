@@ -1,0 +1,15 @@
+{
+  "name": "style",
+  "main": "./lib/main",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "atom": ">=0.3.17-8ae30d2"
+  },
+  "description": "Enter a description of your package!",
+  "dependencies": {},
+  "license": "MIT"
+}
