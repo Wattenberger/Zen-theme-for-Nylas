@@ -1,11 +1,13 @@
 @import "ui-variables";
 @import "ui-mixins";
 
-@bgc: #fff;
-@ac: #C09305;
+@background-color: #F4E9DF;
+@background-color--hover: #fff;
+@font-color: #4F4E57;
+@accent-color-1: #66AEF3;
 
 @tooltip-color: #001516;
-@tooltip-text-color: #fff;
+@tooltip-text-color: @background-color;
 
 @keyframes slideIn {
 	0% { transform: translate3d(-20px, 0, 0); opacity: 0; }
@@ -27,7 +29,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: @ac;
+  color: @accent-color-1;
 }
 
 .column-MessageList {
@@ -54,17 +56,17 @@ div[name=Center] {
 }
 
 .sheet-toolbar-container {
-  background: #f4f4f4;
+  background: @background-color;
 }
 
 .btn-toolbar, .sheet-toolbar .btn-toolbar {
   &:not(.btn-emphasis) {
     position: relative;
     box-shadow: none;
-    background: #fff;
+    background: @background-color;
     cursor: pointer;
     &:hover {
-      background: #eaeaea;
+      background: @background-color--hover;
       &:before {
         opacity: 1;
         bottom: -5px;
@@ -122,6 +124,10 @@ input[type="text"].input-bordered, input[type="email"].input-bordered, input[typ
 
 // SIDEBAR
 
+.account-sidebar, div.account-sidebar-sections {
+	background: none !important;
+}
+
 .column-RootSidebar {
   background: url(https://images.unsplash.com/reserve/yapfjxRqy2d2rGRNc2yQ_zavrsnica-9-indie.jpg?dpr=1.80&fit=crop&fm=jpg&h=900&q=55&w=1600);
   background-size: cover;
@@ -144,7 +150,7 @@ input[type="text"].input-bordered, input[type="email"].input-bordered, input[typ
 
 #account-switcher .item.selected, #account-sidebar .item.selected {
   background: none;
-  color: #fff;
+  color: @background-color;
   font-weight: 800;
 }
 
@@ -179,7 +185,7 @@ input[type="text"].input-bordered, input[type="email"].input-bordered, input[typ
 
 body.is-blurred {
   .list-container .list-item.focused {
-    background: white;
+    background: @background-color;
   }
   .thread-list .list-column, .draft-list .list-column, .list-container .list-item.focused .list-column {
     border-bottom: 1px solid rgba(221, 221, 221, 0.3);
@@ -217,11 +223,11 @@ body.is-blurred {
 }
 
 .list-container .list-item.focused {
-  background: white;
+  background: @background-color;
 }
 
 .list-container .list-item.focused .list-column {
-  color: @ac;
+  color: @accent-color-1;
   margin-left: 9px;
 }
 
@@ -229,10 +235,14 @@ body.is-blurred {
   padding: 0;
 }
 
+.list-container .list-item.focused .list-column {
+	color: @background-color;
+}
+
 // MESSAGE
 
+background: @background-color;
 #message-list {
-  background: @bgc;
 }
 
 #message-list .messages-wrap {
@@ -243,8 +253,8 @@ body.is-blurred {
   box-shadow: none;
 }
 
+background: @background-color;
 .column-MessageListSidebar {
-  background: @bgc;
   border: none;
 }
 
@@ -257,7 +267,7 @@ body.is-blurred {
 }
 
 .list-item.list-tabular-item.keyboard-cursor {
-  background: white;
+  background: @background-color;
 }
 
 .list-tabular .list-tabular-item.keyboard-cursor .list-column:first-child {
@@ -266,8 +276,8 @@ body.is-blurred {
 }
 
 .list-container .list-item.selected {
-  background: white;
-  color: @ac;
+  background: @background-color;
+  color: @accent-color-1;
 }
 
 .thread-list .list-column, .draft-list .list-column, .list-container .list-item.focused .list-column {
@@ -276,7 +286,7 @@ body.is-blurred {
 
 #message-list .message-item-wrap .message-item-white-wrap.composer-outer-wrap.focused {
   box-shadow: none;
-  outline: 1px solid @ac;
+  outline: 1px solid @accent-color-1;
 }
 
 // SIDEBAR
@@ -290,7 +300,7 @@ body.is-blurred {
 }
 
 .composer-inner-wrap .composer-centered {
-  background: #fafafa;
+  background: @background-color;
 }
 
 .contact-card-fullcontact h1.name {
@@ -312,7 +322,7 @@ body.is-blurred {
 }
 
 .column-MessageListSidebar {
-  background: #fafafa;
+  background: @background-color;
 }
 
 // SCROLLBAR

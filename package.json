@@ -1,5 +1,6 @@
 {
-  "name": "style",
+  "name": "zen",
+  "theme": "Zen",
   "main": "./lib/main",
   "version": "0.1.0",
   "repository": {
@@ -9,7 +10,7 @@
   "engines": {
     "atom": ">=0.3.17-8ae30d2"
   },
-  "description": "Enter a description of your package!",
+  "description": "A zen theme with a replaceable background image for the sidebar.",
   "dependencies": {},
   "license": "MIT"
 }
